@@ -44,11 +44,11 @@ snippet casper
 	t.comment('        Testing the Annonymous User:         ');
 	t.comment('---------------------------------------------');
 
-	casper.start(url + Paths.$2}, function(){
+	casper.start(url + Paths.$2, function(){
 		t.comment('Testing the $2 path.');
 		Base = Elements.$2;
 
-		var Element = {type : 'xpath', path : Base.$8};
+		var Element =  Base.$8;
 		t.assertExists(Element,"${10:Insert the assertion message here.}" );
 		
 		t.comment('');
